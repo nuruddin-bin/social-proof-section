@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-spartan);
+}
+
+:root{
+    /* primary color */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    /* natural color */
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-agenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+    /* font family */
+    --ff-spartan: 'Spartan', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
