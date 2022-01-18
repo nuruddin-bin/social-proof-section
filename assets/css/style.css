@@ -31,12 +31,13 @@ body{
 /* main section */
 .main{
     width: min(90rem, 100%);
-    height: 50rem;
+    min-height: 50rem;
     background-color: var(--white);
     background-image: url(../img/bg-pattern-top-desktop.svg), url(../img/bg-pattern-bottom-desktop.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: top left, bottom right;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -44,10 +45,9 @@ body{
 /*------------- top section ---------------*/
 .top-section{
     background-color: transparent;
-    width: min(69rem, 100%);
+    width: min(69rem, 90%);
     display: flex;
     flex-wrap: wrap;
-    margin: 0 1.25rem;
 }
 
 /* left side */
@@ -114,8 +114,86 @@ body{
 }
 
 
+/*----------- bottom section ---------*/
+.bottom_section{
+    background-color: transparent;
+    width: min(69rem, 90%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 4.3rem;
+}
+
+/* all card */
+.bt_card{
+    width: calc(100% / 3 - 1.5rem);
+    min-width: 21.6rem;
+    background-color: var(--very-dark-magenta);
+    position: relative;
+    padding: 2.5rem 1.6rem 2rem 1.7rem;
+    border-radius: .5rem;
+}
+
+.bt_card-img{
+    width: 2.5rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.name{
+    display: inline-block;
+    position: absolute;
+    top: 2.7rem;
+    left: 5.5rem;
+    font-size: 13px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.title{
+    display: inline-block;
+    position: absolute;
+    top: 4rem;
+    left: 5.5rem;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--soft-pink);
+}
+
+.bt_card p{
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+}
+
+/* separet card */
+.bt_card-2{
+    transform: translateY(1rem);
+    margin: 0 .5rem;
+}
+.bt_card-3{
+    transform: translateY(2rem);
+}
+
+
+
 /* ----------- responsive -------------- */
-@media(max-width: 1044px){
+@media(max-width: 1169px){
+    /* main section */
+    .main{
+        padding: 4.6rem 0 7rem 0;
+    }
+
+    /* botton section */
+    .bottom_section{
+        justify-content: center;
+    }
+}
+
+
+@media(max-width: 1116px){
     /* top left side */
     .top_left{
         width: 100%;
@@ -172,6 +250,7 @@ body{
         font-size: 2rem;
     }
 }
+
 
 @media(max-width: 375px){
     /* main section bg */
